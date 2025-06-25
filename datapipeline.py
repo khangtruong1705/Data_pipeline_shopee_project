@@ -3,13 +3,13 @@ from sqlalchemy import create_engine
 import unicodedata
 import os
 import json
-from dotenv import load_dotenv
 
-load_dotenv()
+
+
 
 # Connect DB
-SOURCE_DB_URL = os.getenv("SOURCE_DB_URL")
-TARGET_DB_URL = os.getenv("TARGET_DB_URL")
+SOURCE_DB_URL = os.environ["SOURCE_DB_URL"]
+TARGET_DB_URL = os.environ["TARGET_DB_URL"]
 
 source_engine = create_engine(SOURCE_DB_URL)
 target_engine = create_engine(TARGET_DB_URL)
