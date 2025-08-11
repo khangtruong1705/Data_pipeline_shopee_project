@@ -8,8 +8,8 @@ import json
 
 
 # Connect DB
-SOURCE_DB_URL = os.environ["SOURCE_DB_URL"]
-TARGET_DB_URL = os.environ["TARGET_DB_URL"]
+SOURCE_DB_URL = "postgresql://admin:d6eSIZdR10RwUijT8hRJ8HE8TPtYDpOy@dpg-d204267gi27c73c595eg-a.singapore-postgres.render.com/backend_database_gfgc"
+TARGET_DB_URL = "postgresql://admin:d6eSIZdR10RwUijT8hRJ8HE8TPtYDpOy@dpg-d204267gi27c73c595eg-a.singapore-postgres.render.com/datawarehouse"
 
 source_engine = create_engine(SOURCE_DB_URL)
 target_engine = create_engine(TARGET_DB_URL)
